@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+}
+
+p, ul{
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.5;
+    font-size: x-large;
+}
+
+body{
+    background-image: url("back.jpg");
+    background-size: cover;
+}
+
+header, footer{
+    background-image: url("header.jpg");
+    background-size: cover;
+    background-position: top center;
+}

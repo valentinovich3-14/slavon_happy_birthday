@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <title>Document</title>
+    </head>
+
+
+    <header>
+        <h1>Станислав Швець З Днем Народження</h1>
+    </header>
+
+    <body>
+
+
+        <p>
+            Славончик, я поздравляю тебя с днём рождения, и <strong>желаю</strong>
+           
+            <ul>
+                <li>оставаться таким же весёлым, открытым и искренним, ведь за это я тебя и люблю</li>
+                <li>сдать на права и уже законно крутить баранку</li>
+                <li>не много денег, а достигать своих целей и чтобы если тебе чего-то хотелось оно обязательно к тебе приходило</li>
+                <li>чтобы твои мечты всегда материализовались</li>
+                <li>чтобы через свои проблемы ты проходил с достоинством и брал из них урок</li>
+                <li>чтобы хватало свободного времени на родных, девушку, друзей и конечно походянские</li>
+                <li>поехать в этом году (и не только) на моря</li>
+                <li>найти тебе ту работу которая будет приносить только удовольствие и на которую ты будешь ходить по утрам с улыбкой</li>
+                <li>как пелось в песне:"хмурые дни оставлять, а ясные запоминать и забирать" фоткать и снимать на видео
+                    <p>потом так приятно посидеть посмотреть и вспомнить что у тебя было хорошего</p>
+                </li>
+                <li>и ещё чтобы всё таки ясных дней было больше, с днюхой тебя братик с сорока-счем-то-летием</li>
+            </ul>
+
+        </p>
+
+
+
+        <p>тут можешь глянуть фоточки...(внизу можно погортать)</p>
+
+        <table style="margin: 0 auto;">
+
+            <tr style="text-align: center;">
+                <td colspan="3"><img src="1.png" width=90% name="slide_show"></td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;"><a href="javascript:chgImg(-1)">Предыдущая</a></td>
+                <td style="text-align: center;"><a href="javascript:auto()">Старт/Стоп</a></td>
+                <td style="text-align: left;"><a href="javascript:chgImg(1)">Следующая</a></td>
+            </tr>
+        
+        </table>
+
+
+        <script type="text/javascript">
+            
+        all_images = new Array (
+        "1.png", 
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png",
+        "7.png",
+        "8.png",
+        "9.png",
+        "10.png",
+        "11.png",
+        "12.png",
+        "13.png",
+        "14.png",
+        "15.png",
+        "16.png",
+        "17.png",
+        "18.png",);
+        var ImgNum = 0;
+        var ImgLength = all_images.length - 1;
+        var delay = 10000;
+        var lock = false;
+        var run;
+
+        function chgImg(direction) {
+            if (document.images) {
+            ImgNum = ImgNum + direction;
+                if (ImgNum > ImgLength) { ImgNum = 0; 
+                }
+                if (ImgNum < 0) { ImgNum = ImgLength; }
+                document.slide_show.src = all_images[ImgNum];
+            }
+        }
+
+        function auto() {
+            if (lock == true) {
+            lock = false;
+            window.clearInterval(run);
+            }else if (lock == false) {
+            lock = true;
+            run = setInterval("chgImg(1)", delay);
+            }
+        }
+
+        </script>
+
+        <script type="text/javascript">
+        auto();
+        </script>
+
+        <p> </p>
+
+        <p>p.s. Надеюсь кошелек тебе понравиться и мне будет приятно если будешь с ним ходить. Он шился с люблю)</p>
+
+        <footer>
+            autor: Гончаренок Денис
+        </footer>
+            
+    </body>
+</html>
